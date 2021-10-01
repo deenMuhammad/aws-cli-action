@@ -1,4 +1,4 @@
-name: aws-cli-action
+name: AWS CLI Action
 description: Run aws cli also piped to jq
 
 inputs:
