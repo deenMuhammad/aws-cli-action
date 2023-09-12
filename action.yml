@@ -2,15 +2,6 @@ name: AWS CLI Action
 description: Run aws cli also piped to jq
 
 inputs:
-  aws-access-key-id:
-    description: AWS_ACCESS_KEY_ID
-    required: true
-  aws-secret-access-key:
-    description: AWS_SECRET_ACCESS_KEY
-    required: true
-  aws-region:
-    description: AWS_REGION
-    required: true
   args:
     description: Command-line arguments to the `aws`
     required: true
@@ -28,7 +19,4 @@ runs:
   args:
     - ${{ inputs.args }}
   env:
-    AWS_ACCESS_KEY_ID: ${{ inputs.aws-access-key-id }}
-    AWS_SECRET_ACCESS_KEY: ${{ inputs.aws-secret-access-key }}
-    AWS_REGION: ${{ inputs.aws-region }}
     JQ_ARGS: ${{ inputs.jq-args }}
